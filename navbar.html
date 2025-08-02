@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   menuButton.addEventListener("click", function(event) {
     event.stopPropagation();
-    menuContent.classList.toggle("show");
+    // Always add 'show' (open menu), do NOT toggle
+    menuContent.classList.add("show");
   });
 
   document.addEventListener("click", function(event) {
