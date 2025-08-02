@@ -12,22 +12,3 @@
     </div>
   </div>
 </nav>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const menuButton = document.getElementById("menuButton");
-  const menuContent = document.getElementById("menuContent");
-
-  menuButton.addEventListener("click", function(event) {
-    event.stopPropagation();
-    // Always add 'show' (open menu), do NOT toggle
-    menuContent.classList.add("show");
-  });
-
-  document.addEventListener("click", function(event) {
-    if (!event.target.closest(".dropdown")) {
-      menuContent.classList.remove("show");
-    }
-  });
-});
-</script>
