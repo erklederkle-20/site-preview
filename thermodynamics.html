@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpideyPhysics - Thermodynamics</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JavaScript -->
+  <script src="navbar.js" defer></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+  </script>
+
+  <!-- Main Content -->
+  <main style="padding: 20px; max-width: 1000px; margin: auto;">
+    <h1 style="font-family: 'Orbitron', sans-serif; text-align: center;">
+      Thermodynamics
+    </h1>
+
+    <!-- Intro Section -->
+    <section>
+      <h2 style="font-family: 'Orbitron', sans-serif;">Introduction</h2>
+      <p style="font-family: 'Roboto', sans-serif;">
+        Thermodynamics is the study of heat, energy, and work, focusing on the laws governing energy transfer and the properties of systems in equilibrium.
+      </p>
+    </section>
+
+    <!-- Textbooks Section -->
+    <section>
+      <h2 style="font-family: 'Orbitron', sans-serif;">Recommended Textbooks</h2>
+      <ul style="font-family: 'Roboto', sans-serif;">
+        <li>Thermodynamics: An Engineering Approach – Yunus A. Çengel & Michael A. Boles</li>
+        <li>Fundamentals of Statistical and Thermal Physics – Frederick Reif</li>
+        <li>Introduction to Modern Thermodynamics – Dilip Kondepudi</li>
+      </ul>
+    </section>
+
+    <!-- Practice / Quizzes Section -->
+    <section>
+      <h2 style="font-family: 'Orbitron', sans-serif;">Practice & Quizzes</h2>
+      <p style="font-family: 'Roboto', sans-serif;">
+        Add quiz questions, practice problems, or interactive exercises related to thermodynamics here.
+      </p>
+    </section>
+
+  </main>
+
+</body>
+</html>
