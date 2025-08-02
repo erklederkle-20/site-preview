@@ -9,6 +9,16 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+<div id="navbar"></div>
+<script>
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+</script>
+
   <nav class="top-bar">
     <a href="index.html" class="logo-link">
       <img src="MainSpideyLogo.png" alt="SpideyPhysics Logo" class="logo" />
