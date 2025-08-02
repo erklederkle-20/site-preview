@@ -3,143 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> SpideyPhysics Tutoring</title>
-  <link rel="icon" href="SpideyLogo.png" type="image/png">
+  <title>SpideyPhysics Tutoring</title>
+  <link rel="icon" href="SpideyLogo.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet" />
- 
-  <link rel="stylesheet" href="styles.css"> <!-- Confirm your css filename -->
+  
+  <!-- FIXED CSS filename -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div id="navbar"></div>
-<script>
-  fetch('navbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar').innerHTML = data;
+  <!-- Navbar container -->
+  <div id="navbar"></div>
 
-      // Now that navbar is inserted, setup menu button handler
-      const menuButton = document.getElementById("menuButton");
-      const menuContent = document.getElementById("menuContent");
+  <script>
+    // Fetch and inject navbar HTML, then attach menu toggle listeners
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
 
-      if (menuButton && menuContent) {
-        console.log("Menu button and content found — adding event listeners");
-        menuButton.addEventListener("click", function(event) {
-          event.stopPropagation();
-          menuContent.classList.toggle("show");
-        });
+        const menuButton = document.getElementById("menuButton");
+        const menuContent = document.getElementById("menuContent");
 
-        // Close menu if clicking outside
-        document.addEventListener("click", function(event) {
-          if (!event.target.closest(".dropdown")) {
-            menuContent.classList.remove("show");
-          }
-        });
-      } else {
-        console.warn("Menu button or content NOT found");
-      }
-    })
-    .catch(error => {
-      console.error("Failed to load navbar:", error);
-    });
-</script>
+        if (menuButton && menuContent) {
+          // Add toggle for menu on button click
+          menuButton.addEventListener("click", function(event) {
+            event.stopPropagation();
+            menuContent.classList.toggle("show");
+          });
 
-<header class="homepage-header">
-  <div class="header-content">
-    <h1>SpideyPhysics</h1>
-    <p>Master Math & Physics with SpideyPrecision. Book a free meeting to untangle the concepts troubling you most.</p>
-    <a href="#meeting-form" class="cta-button">🎯 Schedule a Free Meeting</a>
-  </div>
-</header>
+          // Close menu when clicking outside
+          document.addEventListener("click", function(event) {
+            if (!event.target.closest(".dropdown")) {
+              menuContent.classList.remove("show");
+            }
+          });
+        } else {
+          console.warn("Menu button or content NOT found");
+        }
+      })
+      .catch(error => {
+        console.error("Failed to load navbar:", error);
+      });
+  </script>
 
-<section>
-  <h2>🧠 Why Choose SpideyPhysics?</h2>
-  <ul style="list-style: none; padding-left: 0; line-height: 1.8; font-size: 1.1rem;">
-    <li><span style="color:#e62429;">✔️</span> Personalized tutoring tailored to your needs</li>
-    <li><span style="color:#e62429;">✔️</span> Clear explanations that untangle complex concepts</li>
-    <li><span style="color:#e62429;">✔️</span> Free intro meeting to find out if it's the right fit</li>
-    <li><span style="color:#e62429;">✔️</span> Passionate about helping students build real confidence</li>
-  </ul>
-  <p style="text-align: center; margin-top: 2rem;">
-    <a href="https://www.linkedin.com/in/erikhristev" target="_blank" 
-       style="
-         display: inline-block;
-         background-color: #0077b5; 
-         color: white; 
-         padding: 10px 20px; 
-         border-radius: 6px;
-         font-weight: bold;
-         text-decoration: none;
-         font-family: 'Roboto', sans-serif;
-         transition: background-color 0.3s ease;
-       "
-       onmouseover="this.style.backgroundColor='#005582'"
-       onmouseout="this.style.backgroundColor='#0077b5'">
-      View My LinkedIn Profile
-    </a>
-  </p>
-</section>
+  <header class="homepage-header">
+    <div class="header-content">
+      <h1>SpideyPhysics</h1>
+      <p>Master Math & Physics with SpideyPrecision. Book a free meeting to untangle the concepts troubling you most.</p>
+      <a href="#meeting-form" class="cta-button">🎯 Schedule a Free Meeting</a>
+    </div>
+  </header>
 
-<section>
-  <h2>🎥 Featured Videos from SpideyPhysics</h2>
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/X2O5LileZiw" allowfullscreen></iframe>
-  </div>
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/NNNeTw1kK3A" allowfullscreen></iframe>
-  </div>
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/kZPZwODgiQY" allowfullscreen></iframe>
-  </div>
-  <a href="https://youtube.com/@spideyphysics?si=jOhH6f18vpEF0xps" target="_blank" class="cta-button">Visit My YouTube Channel</a>
-</section>
+  <section>
+    <h2>🧠 Why Choose SpideyPhysics?</h2>
+    <ul style="list-style: none; padding-left: 0; line-height: 1.8; font-size: 1.1rem;">
+      <li><span style="color:#e62429;">✔️</span> Personalized tutoring tailored to your needs</li>
+      <li><span style="color:#e62429;">✔️</span> Clear explanations that untangle complex concepts</li>
+      <li><span style="color:#e62429;">✔️</span> Free intro meeting to find out if it's the right fit</li>
+      <li><span style="color:#e62429;">✔️</span> Passionate about helping students build real confidence</li>
+    </ul>
+    <p style="text-align: center; margin-top: 2rem;">
+      <a href="https://www.linkedin.com/in/erikhristev" target="_blank" 
+         style="
+           display: inline-block;
+           background-color: #0077b5; 
+           color: white; 
+           padding: 10px 20px; 
+           border-radius: 6px;
+           font-weight: bold;
+           text-decoration: none;
+           font-family: 'Roboto', sans-serif;
+           transition: background-color 0.3s ease;
+         "
+         onmouseover="this.style.backgroundColor='#005582'"
+         onmouseout="this.style.backgroundColor='#0077b5'">
+        View My LinkedIn Profile
+      </a>
+    </p>
+  </section>
 
-<section>
-  <h2>📄 Downloadable Study Guides</h2>
-  <ul style="list-style: none; padding-left: 0; font-size: 1.1rem; line-height: 2;">
-    <div style="text-align: center; margin-bottom: 1.5rem;">
-      <a href="How_to_Understand_Any_Physics_Equation.pdf" target="_blank" class="download-pdf">
-        🌀 Download: How to Understand Any Physics Equation – Case Study: Newton's Second Law
+  <section>
+    <h2>🎥 Featured Videos from SpideyPhysics</h2>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/X2O5LileZiw" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/NNNeTw1kK3A" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/kZPZwODgiQY" allowfullscreen></iframe>
+    </div>
+    <a href="https://youtube.com/@spideyphysics?si=jOhH6f18vpEF0xps" target="_blank" class="cta-button">Visit My YouTube Channel</a>
+  </section>
+
+  <section>
+    <h2>📄 Downloadable Study Guides</h2>
+    <ul style="list-style: none; padding-left: 0; font-size: 1.1rem; line-height: 2;">
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <a href="How_to_Understand_Any_Physics_Equation.pdf" target="_blank" class="download-pdf">
+          🌀 Download: How to Understand Any Physics Equation – Case Study: Newton's Second Law
+        </a>
+      </div>
+      <!-- Add more PDF links here if needed -->
+    </ul>
+    <p style="text-align: center; margin-top: 1.5rem;">
+      <em>More free guides coming soon – stay tuned!</em>
+    </p>
+  </section>
+
+  <section id="meeting-form">
+    <h2>🗓️ Schedule a Free Meeting</h2>
+    <p style="text-align: center; max-width: 600px; margin: 0 auto 20px; color: #ccc;">
+      Have a question or want to book a free intro meeting?  
+      Just click below, and your email app will open with a pre-filled message.  
+    </p>
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="mailto:spideyphysics@gmail.com?subject=SpideyPhysics%20Tutoring%20Inquiry&body=Hi%20Erik,%0D%0A%0D%0AI%20am%20interested%20in%20tutoring.%20My%20name%20is%20[Your%20Name]%20and%20I%20would%20like%20help%20with%20[Your%20Topic].%0D%0A%0D%0AThank%20you!"
+         class="cta-button"
+         style="display: inline-block; background: #e62429; color: #fff; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: background 0.3s ease;">
+        📩 Send Me a Message
       </a>
     </div>
-    <!-- Add more PDF links here if needed -->
-  </ul>
-  <p style="text-align: center; margin-top: 1.5rem;">
-    <em>More free guides coming soon – stay tuned!</em>
-  </p>
-</section>
+  </section>
 
-<section id="meeting-form">
-  <h2>🗓️ Schedule a Free Meeting</h2>
-  <p style="text-align: center; max-width: 600px; margin: 0 auto 20px; color: #ccc;">
-    Have a question or want to book a free intro meeting?  
-    Just click below, and your email app will open with a pre-filled message.  
-  </p>
-  <div style="text-align: center; margin-top: 20px;">
-    <a href="mailto:spideyphysics@gmail.com?subject=SpideyPhysics%20Tutoring%20Inquiry&body=Hi%20Erik,%0D%0A%0D%0AI%20am%20interested%20in%20tutoring.%20My%20name%20is%20[Your%20Name]%20and%20I%20would%20like%20help%20with%20[Your%20Topic].%0D%0A%0D%0AThank%20you!"
-       class="cta-button"
-       style="display: inline-block; background: #e62429; color: #fff; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: background 0.3s ease;">
-      📩 Send Me a Message
-    </a>
-  </div>
-</section>
+  <footer>
+    © 2025 SpideyPhysics. Made with 🕷️ and passion for science.
+  </footer>
 
-<footer>
-  © 2025 SpideyPhysics. Made with 🕷️ and passion for science.
-</footer>
-
-<script>
-  const symbols = ['E=mc²', 'F=ma', 'ΔV', '∫F·dx', 'v = u + at', 'x(t)', 'ψ(x)', 'ΣF', 'λ', 'hν', 'ΔxΔp ≥ ħ/2'];
-  for (let i = 0; i < 30; i++) {
-    const el = document.createElement('div');
-    el.className = 'equation';
-    el.style.left = Math.random() * 100 + 'vw';
-    el.style.top = (Math.random() * 100 + 100) + 'vh';
-    el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-    el.style.animationDuration = (20 + Math.random() * 20) + 's';
-    document.body.appendChild(el);
-  }
-</script>
+  <script>
+    // Floating physics equations animation
+    const symbols = ['E=mc²', 'F=ma', 'ΔV', '∫F·dx', 'v = u + at', 'x(t)', 'ψ(x)', 'ΣF', 'λ', 'hν', 'ΔxΔp ≥ ħ/2'];
+    for (let i = 0; i < 30; i++) {
+      const el = document.createElement('div');
+      el.className = 'equation';
+      el.style.left = Math.random() * 100 + 'vw';
+      el.style.top = (Math.random() * 100 + 100) + 'vh';
+      el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+      el.style.animationDuration = (20 + Math.random() * 20) + 's';
+      document.body.appendChild(el);
+    }
+  </script>
 
 </body>
 </html>
