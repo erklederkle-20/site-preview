@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpideyPhysics - Mechanics</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JavaScript -->
+  <script src="navbar.js" defer></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+  </script>
+
+  <!-- Main Content -->
+  <main style="padding: 20px; max-width: 1000px; margin: auto;">
+    <h1 style="font-family: 'Orbitron', sans-serif; text-align: center;">
+      Mechanics
+    </h1>
+
+    <!-- Intro Section -->
+    <section>
+      <h2 style="font-family: 'Orbitron', sans-serif;">Introduction</h2>
+      <p style="font-family: 'Roboto', sans-serif;">
+        Mechanics is the branch of physics that deals with the motion of objects and the forces that affect them. It forms the foundation for understanding how things move in everyday life and in the universe.
+      </p>
+    </section>
+
+    <!-- Textbooks Section -->
+    <section>
+      <h2 style="font-family: 'Orbitron', sans-serif;">Recommended Textbooks</h2>
+      <ul style="font-family: 'Roboto', sans-serif;">
+        <li>Classical Mechanics – Herbert Goldstein</li>
+        <li>Introduction to Mechanics – Kleppner and Kolenkow</li>
+        <li>Fundamentals of Physics – Halliday, Resnick, and Walker</li>
+      </ul>
+    </section>
+
+    <!-- Practice / Quizzes Section -->
+    <section>
+      <h2 style="font-family: 'Orbitron', sans-serif;">Practice & Quizzes</h2>
+      <p style="font-family: 'Roboto', sans-serif;">
+        Add quiz questions, practice problems, or interactive exercises related to mechanics here.
+      </p>
+    </section>
+
+  </main>
+
+</body>
+</html>
