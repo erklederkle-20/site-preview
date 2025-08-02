@@ -276,3 +276,9 @@ section ul li a {
 section ul li a:hover {
   text-decoration: underline;
 }
+
+header h1, header p {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
