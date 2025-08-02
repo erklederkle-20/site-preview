@@ -15,38 +15,6 @@
   <!-- Navbar container -->
   <div id="navbar"></div>
 
-  <script>
-    // Fetch and inject navbar HTML, then attach menu toggle listeners
-    fetch('navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-
-        const menuButton = document.getElementById("menuButton");
-        const menuContent = document.getElementById("menuContent");
-
-        if (menuButton && menuContent) {
-          // Add toggle for menu on button click
-          menuButton.addEventListener("click", function(event) {
-            event.stopPropagation();
-            menuContent.classList.toggle("show");
-          });
-
-          // Close menu when clicking outside
-          document.addEventListener("click", function(event) {
-            if (!event.target.closest(".dropdown")) {
-              menuContent.classList.remove("show");
-            }
-          });
-        } else {
-          console.warn("Menu button or content NOT found");
-        }
-      })
-      .catch(error => {
-        console.error("Failed to load navbar:", error);
-      });
-  </script>
-
   <header class="homepage-header">
     <div class="header-content">
       <h1>SpideyPhysics</h1>
@@ -144,6 +112,8 @@
       document.body.appendChild(el);
     }
   </script>
+
+  <script src="navbar.js" defer></script>
 
 </body>
 </html>
