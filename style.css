@@ -283,7 +283,7 @@ footer {
   z-index: 1;
 }
 
-/* Show when active */
+/* Show only when toggled with JavaScript */
 .dropdown-content.show {
   display: block;
 }
