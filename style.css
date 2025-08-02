@@ -272,7 +272,7 @@ footer {
 }
 
 .dropdown-content {
-  display: none;
+  display: none; /* hidden by default */
   position: absolute;
   right: 0;
   background-color: #111;
@@ -292,8 +292,4 @@ footer {
 
 .dropdown-content a:hover {
   background-color: #222;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
