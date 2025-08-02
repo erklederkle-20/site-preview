@@ -214,6 +214,55 @@
         height: 60px; /* doubled from 30px */
       }
     }
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: #e62429;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  background: #ff3b3b;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #111;
+  min-width: 200px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #222;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
   </style>
 </head>
 <body>
@@ -223,7 +272,15 @@
     <a href="#top" class="logo-link">
       <img src="MainSpideyLogo.png" alt="SpideyPhysics Logo" class="logo">
     </a>
-    <a href="#meeting-form" class="cta-top">🎯 Book a Meeting</a>
+    <div class="dropdown">
+  <button class="dropbtn">📂 Menu</button>
+  <div class="dropdown-content">
+    <a href="physics.html">📚 Physics Education</a>
+    <a href="youtube.html">🎥 YouTube Videos</a>
+    <a href="pdfs.html">📄 PDF Library</a>
+    <a href="#meeting-form">🗓️ Book a Meeting</a>
+  </div>
+</div>
   </nav>
 
   <header>
