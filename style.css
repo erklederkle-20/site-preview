@@ -282,3 +282,21 @@ header h1, header p {
   width: 100%;
   text-align: center;
 }
+
+.simple-header {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.simple-header h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #e62429;
+}
+
+.simple-header p {
+  font-size: 1.2rem;
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto;
+}
