@@ -272,7 +272,7 @@ footer {
 }
 
 .dropdown-content {
-  display: none; /* hidden by default */
+  display: none; /* Hidden by default */
   position: absolute;
   right: 0;
   background-color: #111;
@@ -281,6 +281,11 @@ footer {
   overflow: hidden;
   box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
   z-index: 1;
+}
+
+/* Show when active */
+.dropdown-content.show {
+  display: block;
 }
 
 .dropdown-content a {
