@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpideyPhysics - History of Physics</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JavaScript -->
+  <script src="navbar.js" defer></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+  </script>
+
+  <!-- Main Content -->
+  <main style="padding: 20px; max-width: 1000px; margin: auto;">
+    <h1 style="font-family: 'Orbitron', sans-serif; text-align: center;">
+      History of Physics
+    </h1>
+
+    <!-- Intro Section -->
+    <section>
+      <h2 style="font-family: 'Orbitron', sans-serif;">Introduction</h2>
+      <p style="font-family: 'Roboto', sans-serif;">
+        Explore the development of physics from ancient times through modern discoveries, highlighting key figures, experiments, and theories that shaped the field.
+      </p>
+    </section>
+
+    <!-- Textbooks Section -->
+    <section>
+      <h2 style="font-family: 'Orbitron', sans-serif;">Recommended Textbooks</h2>
+      <ul style="font-family: 'Roboto', sans-serif;">
+        <li>A History of Physics – Helge Kragh</li>
+        <li>The Structure of Scientific Revolutions – Thomas S. Kuhn</li>
+        <li>The Making of Modern Physics – Richard Feynman (Lectures & Writings)</li>
+      </ul>
+    </section>
+
+    <!-- Practice / Quizzes Section -->
+    <section>
+      <h2 style="font-family: 'Orbitron', sans-serif;">Practice & Quizzes</h2>
+      <p style="font-family: 'Roboto', sans-serif;">
+        Add quiz questions, timeline activities, or discussion prompts related to the history of physics here.
+      </p>
+    </section>
+
+  </main>
+
+</body>
+</html>
