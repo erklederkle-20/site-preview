@@ -8,15 +8,8 @@
 </head>
 <body>
 
-<div id="navbar"></div>
-<script>
-  fetch('navbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar').innerHTML = data;
-    });
-</script>
-
+  <!-- Navbar placeholder -->
+  <div id="navbar"></div>
 
   <!-- Page Header -->
   <header class="simple-header">
@@ -95,6 +88,9 @@
   <footer>
     © 2025 SpideyPhysics. Made with 🕷️ and passion for science.
   </footer>
+
+  <!-- Shared navbar loader + menu toggle -->
+  <script src="navbar.js" defer></script>
 
 </body>
 </html>
