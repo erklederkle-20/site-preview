@@ -11,6 +11,16 @@
 
 </head>
 <body>
+
+<div id="navbar"></div>
+<script>
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+</script>
+
   <!-- Sticky Nav Bar with Logo and CTA -->
   <div id="top" style="position: absolute; top: 0;"></div>
   <nav class="top-bar">
