@@ -7,8 +7,7 @@
   <link rel="icon" href="SpideyLogo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet" />
  
-<link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="styles.css"> <!-- Confirm your css filename -->
 </head>
 <body>
 
@@ -18,60 +17,84 @@
     .then(response => response.text())
     .then(data => {
       document.getElementById('navbar').innerHTML = data;
+
+      // Now that navbar is inserted, setup menu button handler
+      const menuButton = document.getElementById("menuButton");
+      const menuContent = document.getElementById("menuContent");
+
+      if (menuButton && menuContent) {
+        console.log("Menu button and content found — adding event listeners");
+        menuButton.addEventListener("click", function(event) {
+          event.stopPropagation();
+          menuContent.classList.toggle("show");
+        });
+
+        // Close menu if clicking outside
+        document.addEventListener("click", function(event) {
+          if (!event.target.closest(".dropdown")) {
+            menuContent.classList.remove("show");
+          }
+        });
+      } else {
+        console.warn("Menu button or content NOT found");
+      }
+    })
+    .catch(error => {
+      console.error("Failed to load navbar:", error);
     });
 </script>
 
-  <header class="homepage-header">
-    <div class="header-content">
-      <h1>SpideyPhysics</h1>
-      <p>Master Math & Physics with SpideyPrecision. Book a free meeting to untangle the concepts troubling you most.</p>
-      <a href="#meeting-form" class="cta-button">🎯 Schedule a Free Meeting</a>
-    </div>
-  </header>
+<header class="homepage-header">
+  <div class="header-content">
+    <h1>SpideyPhysics</h1>
+    <p>Master Math & Physics with SpideyPrecision. Book a free meeting to untangle the concepts troubling you most.</p>
+    <a href="#meeting-form" class="cta-button">🎯 Schedule a Free Meeting</a>
+  </div>
+</header>
 
-  <section>
-    <h2>🧠 Why Choose SpideyPhysics?</h2>
-      <ul style="list-style: none; padding-left: 0; line-height: 1.8; font-size: 1.1rem;">
-        <li><span style="color:#e62429;">✔️</span> Personalized tutoring tailored to your needs</li>
-        <li><span style="color:#e62429;">✔️</span> Clear explanations that untangle complex concepts</li>
-        <li><span style="color:#e62429;">✔️</span> Free intro meeting to find out if it's the right fit</li>
-        <li><span style="color:#e62429;">✔️</span> Passionate about helping students build real confidence</li>
-      </ul>
-      <p style="text-align: center; margin-top: 2rem;">
-        <a href="https://www.linkedin.com/in/erikhristev" target="_blank" 
-           style="
-             display: inline-block;
-             background-color: #0077b5; 
-             color: white; 
-             padding: 10px 20px; 
-             border-radius: 6px;
-             font-weight: bold;
-             text-decoration: none;
-             font-family: 'Roboto', sans-serif;
-             transition: background-color 0.3s ease;
-           "
-           onmouseover="this.style.backgroundColor='#005582'"
-           onmouseout="this.style.backgroundColor='#0077b5'">
-          View My LinkedIn Profile
-        </a>
-    </p>
-  </section>
+<section>
+  <h2>🧠 Why Choose SpideyPhysics?</h2>
+  <ul style="list-style: none; padding-left: 0; line-height: 1.8; font-size: 1.1rem;">
+    <li><span style="color:#e62429;">✔️</span> Personalized tutoring tailored to your needs</li>
+    <li><span style="color:#e62429;">✔️</span> Clear explanations that untangle complex concepts</li>
+    <li><span style="color:#e62429;">✔️</span> Free intro meeting to find out if it's the right fit</li>
+    <li><span style="color:#e62429;">✔️</span> Passionate about helping students build real confidence</li>
+  </ul>
+  <p style="text-align: center; margin-top: 2rem;">
+    <a href="https://www.linkedin.com/in/erikhristev" target="_blank" 
+       style="
+         display: inline-block;
+         background-color: #0077b5; 
+         color: white; 
+         padding: 10px 20px; 
+         border-radius: 6px;
+         font-weight: bold;
+         text-decoration: none;
+         font-family: 'Roboto', sans-serif;
+         transition: background-color 0.3s ease;
+       "
+       onmouseover="this.style.backgroundColor='#005582'"
+       onmouseout="this.style.backgroundColor='#0077b5'">
+      View My LinkedIn Profile
+    </a>
+  </p>
+</section>
 
-  <section>
-    <h2>🎥 Featured Videos from SpideyPhysics</h2>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/X2O5LileZiw" allowfullscreen></iframe>
-    </div>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/NNNeTw1kK3A" allowfullscreen></iframe>
-    </div>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/kZPZwODgiQY" allowfullscreen></iframe>
-    </div>
-    <a href="https://youtube.com/@spideyphysics?si=jOhH6f18vpEF0xps" target="_blank" class="cta-button">Visit My YouTube Channel</a>
-  </section>
+<section>
+  <h2>🎥 Featured Videos from SpideyPhysics</h2>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/X2O5LileZiw" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/NNNeTw1kK3A" allowfullscreen></iframe>
+  </div>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/kZPZwODgiQY" allowfullscreen></iframe>
+  </div>
+  <a href="https://youtube.com/@spideyphysics?si=jOhH6f18vpEF0xps" target="_blank" class="cta-button">Visit My YouTube Channel</a>
+</section>
 
-  <section>
+<section>
   <h2>📄 Downloadable Study Guides</h2>
   <ul style="list-style: none; padding-left: 0; font-size: 1.1rem; line-height: 2;">
     <div style="text-align: center; margin-bottom: 1.5rem;">
@@ -101,21 +124,22 @@
   </div>
 </section>
 
-  <footer>
-    © 2025 SpideyPhysics. Made with 🕷️ and passion for science.
-  </footer>
+<footer>
+  © 2025 SpideyPhysics. Made with 🕷️ and passion for science.
+</footer>
 
-  <script>
-    const symbols = ['E=mc²', 'F=ma', 'ΔV', '∫F·dx', 'v = u + at', 'x(t)', 'ψ(x)', 'ΣF', 'λ', 'hν', 'ΔxΔp ≥ ħ/2'];
-    for (let i = 0; i < 30; i++) {
-      const el = document.createElement('div');
-      el.className = 'equation';
-      el.style.left = Math.random() * 100 + 'vw';
-      el.style.top = (Math.random() * 100 + 100) + 'vh';
-      el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-      el.style.animationDuration = (20 + Math.random() * 20) + 's';
-      document.body.appendChild(el);
-    }
-  </script>
+<script>
+  const symbols = ['E=mc²', 'F=ma', 'ΔV', '∫F·dx', 'v = u + at', 'x(t)', 'ψ(x)', 'ΣF', 'λ', 'hν', 'ΔxΔp ≥ ħ/2'];
+  for (let i = 0; i < 30; i++) {
+    const el = document.createElement('div');
+    el.className = 'equation';
+    el.style.left = Math.random() * 100 + 'vw';
+    el.style.top = (Math.random() * 100 + 100) + 'vh';
+    el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    el.style.animationDuration = (20 + Math.random() * 20) + 's';
+    document.body.appendChild(el);
+  }
+</script>
+
 </body>
 </html>
