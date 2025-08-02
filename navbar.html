@@ -14,35 +14,19 @@
 </nav>
 
 <script>
+document.addEventListener("DOMContentLoaded", function() {
   const menuButton = document.getElementById("menuButton");
   const menuContent = document.getElementById("menuContent");
 
-  menuButton.addEventListener("click", function (event) {
+  menuButton.addEventListener("click", function(event) {
     event.stopPropagation();
-    menuContent.style.display =
-      menuContent.style.display === "block" ? "none" : "block";
+    menuContent.classList.toggle("show");
   });
 
-  // Close menu if clicking outside
-  document.addEventListener("click", function () {
-    menuContent.style.display = "none";
-  });
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const dropBtn = document.querySelector('.dropbtn');
-  const dropdownContent = document.querySelector('.dropdown-content');
-
-  dropBtn.addEventListener('click', function (event) {
-    event.stopPropagation();
-    dropdownContent.style.display =
-      dropdownContent.style.display === 'block' ? 'none' : 'block';
-  });
-
-  // Close menu if clicked outside
-  document.addEventListener('click', function () {
-    dropdownContent.style.display = 'none';
+  document.addEventListener("click", function(event) {
+    if (!event.target.closest(".dropdown")) {
+      menuContent.classList.remove("show");
+    }
   });
 });
 </script>
