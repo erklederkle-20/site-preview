@@ -10,6 +10,15 @@
 </head>
 <body>
 
+<div id="navbar"></div>
+<script>
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+</script>
+
   <!-- Navigation -->
   <nav class="top-bar">
     <a href="index.html" class="logo-link">
