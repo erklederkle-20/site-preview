@@ -31,79 +31,172 @@
     <h1 style="font-family: 'Orbitron', sans-serif; text-align: center;">
       Classical Mechanics
     </h1>
-    <p style="font-family: 'Roboto', sans-serif; text-align:center; max-width:800px; margin:auto;">
-      This section covers core concepts of classical mechanics, from the most basic definitions to Newton’s Laws of Motion.  
-      It will grow over time as new material is added, so use the table of contents below to jump to topics of interest.
+    <p style="font-family: 'Roboto', sans-serif; text-align: left; max-width:800px; margin:auto;">
+      This section follows the structure of a standard university-level mechanics course. 
+      It will grow over time as more material is added, with each section containing explanations, diagrams, and example problems. 
+      You can use the table of contents below to jump to topics of interest.
     </p>
 
     <!-- Table of Contents -->
     <nav style="background:#222; padding:15px; border-radius:8px; margin:30px 0;">
       <h3 style="color:#e62429; font-family: 'Orbitron', sans-serif;">📑 Table of Contents</h3>
-      <ul style="list-style:none; padding:0; font-family:'Roboto', sans-serif;">
-        <li><a href="#definitions" style="color:#fff;">Basic Definitions</a></li>
-        <li><a href="#vectors" style="color:#fff;">Vectors Overview</a></li>
-        <li><a href="#calculus" style="color:#fff;">Calculus in Mechanics</a></li>
-        <li><a href="#momentum" style="color:#fff;">Momentum</a></li>
-        <li><a href="#newtons-laws" style="color:#fff;">Newton’s Three Laws</a></li>
+      <ul style="list-style:none; padding:0; font-family:'Roboto', sans-serif; line-height: 1.8;">
+        <li><a href="#physics-measurement" style="color:#fff;">1. Physics and Measurement</a></li>
+        <li><a href="#motion-1d" style="color:#fff;">2. Motion in One Dimension</a></li>
+        <li><a href="#vectors" style="color:#fff;">3. Vectors</a></li>
+        <li><a href="#motion-2d" style="color:#fff;">4. Motion in Two Dimensions</a></li>
+        <li><a href="#laws-motion" style="color:#fff;">5. The Laws of Motion</a></li>
+        <li><a href="#circular-motion" style="color:#fff;">6. Circular Motion and Other Applications</a></li>
+        <li><a href="#energy" style="color:#fff;">7. Energy of a System</a></li>
+        <li><a href="#conservation-energy" style="color:#fff;">8. Conservation of Energy</a></li>
+        <li><a href="#momentum" style="color:#fff;">9. Linear Momentum and Collisions</a></li>
+        <li><a href="#rotation" style="color:#fff;">10. Rotation of a Rigid Object</a></li>
+        <li><a href="#angular-momentum" style="color:#fff;">11. Angular Momentum</a></li>
+        <li><a href="#static-equilibrium" style="color:#fff;">12. Static Equilibrium and Elasticity</a></li>
+        <li><a href="#gravitation" style="color:#fff;">13. Universal Gravitation</a></li>
+        <li><a href="#fluids" style="color:#fff;">14. Fluid Mechanics</a></li>
         <li><a href="#references" style="color:#fff;">Textbooks & References</a></li>
       </ul>
     </nav>
 
     <!-- Sections -->
-    <section id="definitions">
-      <h2 style="font-family: 'Orbitron', sans-serif;">Basic Definitions</h2>
-      <p style="font-family: 'Roboto', sans-serif;">
-        <strong>Time:</strong> A measure of the sequence and duration of events. In mechanics, it is treated as a continuous scalar quantity.<br><br>
-        <strong>Distance:</strong> The total length of the path traveled, a scalar quantity, measured in meters (m).<br><br>
-        <strong>Mass:</strong> A measure of the amount of matter in an object, also representing its resistance to acceleration when a force is applied. Measured in kilograms (kg).
-      </p>
+    <section id="physics-measurement">
+      <h2 style="font-family: 'Orbitron', sans-serif;">1. Physics and Measurement</h2>
+      <ul style="font-family: 'Roboto', sans-serif;">
+        <li>Units and standards (SI units)</li>
+        <li>Dimensional analysis</li>
+        <li>Uncertainty and significant figures</li>
+      </ul>
+    </section>
+
+    <section id="motion-1d">
+      <h2 style="font-family: 'Orbitron', sans-serif;">2. Motion in One Dimension</h2>
+      <ul style="font-family: 'Roboto', sans-serif;">
+        <li>Position, displacement, velocity, acceleration</li>
+        <li>Constant acceleration equations</li>
+        <li>Free fall</li>
+      </ul>
     </section>
 
     <section id="vectors">
-      <h2 style="font-family: 'Orbitron', sans-serif;">Vectors Overview</h2>
-      <p style="font-family: 'Roboto', sans-serif;">
-        A vector is a mathematical object that has both magnitude and direction.  
-        Examples in mechanics include displacement, velocity, acceleration, and force.  
-        Vectors are often represented as arrows in diagrams or as components in coordinate systems.
-      </p>
+      <h2 style="font-family: 'Orbitron', sans-serif;">3. Vectors</h2>
+      <ul style="font-family: 'Roboto', sans-serif;">
+        <li>Vector magnitude and direction</li>
+        <li>Vector addition, subtraction, and scalar multiplication</li>
+        <li>Components and unit vectors</li>
+      </ul>
+      <h3 style="font-family: 'Roboto', sans-serif;">🎥 Video: Vectors and Their Algebra</h3>
+      <div style="margin:20px 0;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZCxyYYY52FU" 
+        title="Vectors and Their Algebra - SpideyPhysics" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+      </div>
     </section>
 
-    <section id="calculus">
-      <h2 style="font-family: 'Orbitron', sans-serif;">Calculus in Mechanics</h2>
-      <p style="font-family: 'Roboto', sans-serif;">
-        Calculus provides the mathematical tools to describe change and motion.  
-        Derivatives are used to find quantities like velocity (rate of change of position) and acceleration (rate of change of velocity).  
-        Integrals are used to determine quantities like displacement from velocity or work from force.
-      </p>
+    <section id="motion-2d">
+      <h2 style="font-family: 'Orbitron', sans-serif;">4. Motion in Two Dimensions</h2>
+      <ul style="font-family: 'Roboto', sans-serif;">
+        <li>Projectile motion</li>
+        <li>Relative velocity</li>
+      </ul>
+    </section>
+
+    <section id="laws-motion">
+      <h2 style="font-family: 'Orbitron', sans-serif;">5. The Laws of Motion</h2>
+      <ul style="font-family: 'Roboto', sans-serif;">
+        <li>Newton’s First, Second, and Third Laws</li>
+        <li>Free-body diagrams</li>
+        <li>Forces: friction, tension, normal force, weight</li>
+      </ul>
+    </section>
+
+    <section id="circular-motion">
+      <h2 style="font-family: 'Orbitron', sans-serif;">6. Circular Motion and Other Applications</h2>
+      <ul style="font-family: 'Roboto', sans-serif;">
+        <li>Uniform circular motion</li>
+        <li>Centripetal acceleration and force</li>
+        <li>Banked curves, conical pendulum</li>
+      </ul>
+    </section>
+
+    <section id="energy">
+      <h2 style="font-family: 'Orbitron', sans-serif;">7. Energy of a System</h2>
+      <ul style="font-family: 'Roboto', sans-serif;">
+        <li>Kinetic energy</li>
+        <li>Work and the work-energy theorem</li>
+        <li>Potential energy</li>
+      </ul>
+    </section>
+
+    <section id="conservation-energy">
+      <h2 style="font-family: 'Orbitron', sans-serif;">8. Conservation of Energy</h2>
+      <ul style="font-family: 'Roboto', sans-serif;">
+        <li>Conservative vs non-conservative forces</li>
+        <li>Mechanical energy conservation</li>
+      </ul>
     </section>
 
     <section id="momentum">
-      <h2 style="font-family: 'Orbitron', sans-serif;">Momentum</h2>
-      <p style="font-family: 'Roboto', sans-serif;">
-        Momentum is defined as the product of an object’s mass and velocity: <em>p = mv</em>.  
-        It is a vector quantity and plays a central role in the conservation laws of mechanics.
-      </p>
+      <h2 style="font-family: 'Orbitron', sans-serif;">9. Linear Momentum and Collisions</h2>
+      <ul style="font-family: 'Roboto', sans-serif;">
+        <li>Impulse-momentum theorem</li>
+        <li>Elastic and inelastic collisions</li>
+        <li>Center of mass</li>
+      </ul>
     </section>
 
-    <section id="newtons-laws">
-      <h2 style="font-family: 'Orbitron', sans-serif;">Newton’s Three Laws</h2>
-      <ol style="font-family: 'Roboto', sans-serif;">
-        <li><strong>First Law (Inertia):</strong> A body remains at rest or in uniform motion unless acted upon by a net external force.</li>
-        <li><strong>Second Law:</strong> The acceleration of an object is proportional to the net force acting on it and inversely proportional to its mass. (<em>F = ma</em>)</li>
-        <li><strong>Third Law:</strong> For every action, there is an equal and opposite reaction.</li>
-      </ol>
+    <section id="rotation">
+      <h2 style="font-family: 'Orbitron', sans-serif;">10. Rotation of a Rigid Object</h2>
+      <ul style="font-family: 'Roboto', sans-serif;">
+        <li>Angular variables and kinematics</li>
+        <li>Moment of inertia</li>
+        <li>Rotational kinetic energy</li>
+      </ul>
     </section>
 
+    <section id="angular-momentum">
+      <h2 style="font-family: 'Orbitron', sans-serif;">11. Angular Momentum</h2>
+      <ul style="font-family: 'Roboto', sans-serif;">
+        <li>Angular momentum for particles and rigid bodies</li>
+        <li>Conservation of angular momentum</li>
+      </ul>
+    </section>
+
+    <section id="static-equilibrium">
+      <h2 style="font-family: 'Orbitron', sans-serif;">12. Static Equilibrium and Elasticity</h2>
+      <ul style="font-family: 'Roboto', sans-serif;">
+        <li>Conditions for equilibrium</li>
+        <li>Elastic moduli</li>
+      </ul>
+    </section>
+
+    <section id="gravitation">
+      <h2 style="font-family: 'Orbitron', sans-serif;">13. Universal Gravitation</h2>
+      <ul style="font-family: 'Roboto', sans-serif;">
+        <li>Newton’s law of gravitation</li>
+        <li>Gravitational potential energy</li>
+        <li>Orbits</li>
+      </ul>
+    </section>
+
+    <section id="fluids">
+      <h2 style="font-family: 'Orbitron', sans-serif;">14. Fluid Mechanics</h2>
+      <ul style="font-family: 'Roboto', sans-serif;">
+        <li>Density and pressure</li>
+        <li>Buoyancy</li>
+        <li>Fluid dynamics (Bernoulli’s equation)</li>
+      </ul>
+    </section>
+
+    <!-- References -->
     <section id="references">
       <h2 style="font-family: 'Orbitron', sans-serif;">Textbooks & References</h2>
       <ul style="font-family: 'Roboto', sans-serif;">
-        <li><strong>Classical Dynamics of Particles and Systems</strong> – Thornton & Marion (Advanced text, in-depth theory)</li>
-        <li><strong>University Physics</strong> – Young & Freedman (Comprehensive intro-level text)</li>
-        <li><strong>Physics for Scientists and Engineers</strong> – Serway & Jewett (General undergraduate level)</li>
+        <li><strong>Classical Dynamics of Particles and Systems</strong> – Thornton & Marion (Advanced mechanics)</li>
+        <li><strong>University Physics with Modern Physics</strong> – Young & Freedman (Introductory physics)</li>
+        <li><strong>Physics for Scientists and Engineers</strong> – Serway & Jewett (Comprehensive undergraduate text)</li>
       </ul>
-      <p style="font-family: 'Roboto', sans-serif; font-size:0.9em; color:#aaa;">
-        Note: Only open-access textbooks can be linked directly. For copyrighted works, links are provided to publisher or legal purchase/download sources.
-      </p>
     </section>
 
   </main>
