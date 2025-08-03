@@ -11,6 +11,53 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 
+  <style>
+    /* Section box styling */
+    .section-box {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    /* Responsive YouTube */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 ratio */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Back to top button */
+    #back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #e62429;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      border: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      display: none;
+      z-index: 1000;
+    }
+    #back-to-top:hover {
+      background: #c81f23;
+    }
+  </style>
+
   <!-- JavaScript -->
   <script src="navbar.js" defer></script>
 </head>
@@ -32,174 +79,123 @@
       Classical Mechanics
     </h1>
     <p style="font-family: 'Roboto', sans-serif; text-align: left; max-width:800px; margin:auto;">
-      This section follows the structure of a standard university-level mechanics course. 
-      It will grow over time as more material is added, with each section containing explanations, diagrams, and example problems. 
-      You can use the table of contents below to jump to topics of interest.
+      This section covers fundamental principles of mechanics starting with Newton’s Laws, vectors, and calculus in motion, 
+      along with important physical quantities. We then move into practical motion problems, including ramp and projectile examples, 
+      and will expand into more advanced topics over time.
     </p>
 
     <!-- Table of Contents -->
-    <nav style="background:#222; padding:15px; border-radius:8px; margin:30px 0;">
+    <nav id="toc" style="background:#222; padding:15px; border-radius:8px; margin:30px 0;">
       <h3 style="color:#e62429; font-family: 'Orbitron', sans-serif;">📑 Table of Contents</h3>
       <ul style="list-style:none; padding:0; font-family:'Roboto', sans-serif; line-height: 1.8;">
-        <li><a href="#physics-measurement" style="color:#fff;">1. Physics and Measurement</a></li>
-        <li><a href="#motion-1d" style="color:#fff;">2. Motion in One Dimension</a></li>
-        <li><a href="#vectors" style="color:#fff;">3. Vectors</a></li>
-        <li><a href="#motion-2d" style="color:#fff;">4. Motion in Two Dimensions</a></li>
-        <li><a href="#laws-motion" style="color:#fff;">5. The Laws of Motion</a></li>
-        <li><a href="#circular-motion" style="color:#fff;">6. Circular Motion and Other Applications</a></li>
-        <li><a href="#energy" style="color:#fff;">7. Energy of a System</a></li>
-        <li><a href="#conservation-energy" style="color:#fff;">8. Conservation of Energy</a></li>
-        <li><a href="#momentum" style="color:#fff;">9. Linear Momentum and Collisions</a></li>
-        <li><a href="#rotation" style="color:#fff;">10. Rotation of a Rigid Object</a></li>
-        <li><a href="#angular-momentum" style="color:#fff;">11. Angular Momentum</a></li>
-        <li><a href="#static-equilibrium" style="color:#fff;">12. Static Equilibrium and Elasticity</a></li>
-        <li><a href="#gravitation" style="color:#fff;">13. Universal Gravitation</a></li>
-        <li><a href="#fluids" style="color:#fff;">14. Fluid Mechanics</a></li>
-        <li><a href="#references" style="color:#fff;">Textbooks & References</a></li>
+        <li><a href="#scope" style="color:#fff;">Scope & Introduction</a></li>
+        <li><a href="#definitions" style="color:#fff;">Basic Quantities & Definitions</a></li>
+        <li><a href="#vectors" style="color:#fff;">Vectors</a></li>
+        <li><a href="#calculus" style="color:#fff;">Calculus in Mechanics</a></li>
+        <li><a href="#newtons-laws" style="color:#fff;">Newton’s Laws</a></li>
+        <li><a href="#motion-problems" style="color:#fff;">Motion Problems</a></li>
+        <li><a href="#references" style="color:#fff;">References</a></li>
       </ul>
     </nav>
 
     <!-- Sections -->
-    <section id="physics-measurement">
-      <h2 style="font-family: 'Orbitron', sans-serif;">1. Physics and Measurement</h2>
-      <ul style="font-family: 'Roboto', sans-serif;">
-        <li>Units and standards (SI units)</li>
-        <li>Dimensional analysis</li>
-        <li>Uncertainty and significant figures</li>
-      </ul>
+    <section id="scope" class="section-box">
+      <h2 style="font-family: 'Orbitron', sans-serif;">Scope & Introduction</h2>
+      <p style="font-family: 'Roboto', sans-serif;">
+        We begin by exploring Newton’s three laws of motion, introducing calculus tools, vectors, and 
+        important physical quantities like mass, time, and velocity. This foundation prepares us for 
+        solving motion problems in one and two dimensions.
+      </p>
     </section>
 
-    <section id="motion-1d">
-      <h2 style="font-family: 'Orbitron', sans-serif;">2. Motion in One Dimension</h2>
+    <section id="definitions" class="section-box">
+      <h2 style="font-family: 'Orbitron', sans-serif;">Basic Quantities & Definitions</h2>
       <ul style="font-family: 'Roboto', sans-serif;">
-        <li>Position, displacement, velocity, acceleration</li>
-        <li>Constant acceleration equations</li>
-        <li>Free fall</li>
+        <li><strong>Time:</strong> Sequence and duration of events.</li>
+        <li><strong>Distance:</strong> Scalar measure of path length.</li>
+        <li><strong>Mass:</strong> Measure of matter and inertia.</li>
+        <li><strong>Velocity:</strong> Rate of change of position.</li>
+        <li><strong>Acceleration:</strong> Rate of change of velocity.</li>
       </ul>
+      <h3>Example Problems (Coming Soon)</h3>
+      <p>Practice problems will appear here.</p>
     </section>
 
-    <section id="vectors">
-      <h2 style="font-family: 'Orbitron', sans-serif;">3. Vectors</h2>
+    <section id="vectors" class="section-box">
+      <h2 style="font-family: 'Orbitron', sans-serif;">Vectors</h2>
       <ul style="font-family: 'Roboto', sans-serif;">
-        <li>Vector magnitude and direction</li>
-        <li>Vector addition, subtraction, and scalar multiplication</li>
+        <li>Magnitude and direction</li>
+        <li>Addition, subtraction, scalar multiplication</li>
         <li>Components and unit vectors</li>
       </ul>
-      <h3 style="font-family: 'Roboto', sans-serif;">🎥 Video: Vectors and Their Algebra</h3>
-      <div style="margin:20px 0;">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZCxyYYY52FU" 
+      <div class="video-container" style="margin:20px 0;">
+        <iframe src="https://www.youtube.com/embed/ZCxyYYY52FU" 
         title="Vectors and Their Algebra - SpideyPhysics" frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen></iframe>
       </div>
+      <h3>Example Problems (Coming Soon)</h3>
+      <p>Vector decomposition and projectile examples.</p>
     </section>
 
-    <section id="motion-2d">
-      <h2 style="font-family: 'Orbitron', sans-serif;">4. Motion in Two Dimensions</h2>
+    <section id="calculus" class="section-box">
+      <h2 style="font-family: 'Orbitron', sans-serif;">Calculus in Mechanics</h2>
+      <p style="font-family: 'Roboto', sans-serif;">
+        Calculus allows us to relate position, velocity, and acceleration, as well as determine quantities 
+        like work and energy from force data.
+      </p>
       <ul style="font-family: 'Roboto', sans-serif;">
-        <li>Projectile motion</li>
-        <li>Relative velocity</li>
+        <li>Derivatives: velocity, acceleration</li>
+        <li>Integrals: displacement, work</li>
       </ul>
+      <h3>Example Problems (Coming Soon)</h3>
     </section>
 
-    <section id="laws-motion">
-      <h2 style="font-family: 'Orbitron', sans-serif;">5. The Laws of Motion</h2>
+    <section id="newtons-laws" class="section-box">
+      <h2 style="font-family: 'Orbitron', sans-serif;">Newton’s Laws</h2>
+      <ol style="font-family: 'Roboto', sans-serif;">
+        <li><strong>First Law:</strong> Inertia</li>
+        <li><strong>Second Law:</strong> F = ma</li>
+        <li><strong>Third Law:</strong> Action-reaction</li>
+      </ol>
+      <h3>Example Problems (Coming Soon)</h3>
+    </section>
+
+    <section id="motion-problems" class="section-box">
+      <h2 style="font-family: 'Orbitron', sans-serif;">Motion Problems</h2>
       <ul style="font-family: 'Roboto', sans-serif;">
-        <li>Newton’s First, Second, and Third Laws</li>
-        <li>Free-body diagrams</li>
-        <li>Forces: friction, tension, normal force, weight</li>
+        <li>Sliding box on a ramp (inclined plane)</li>
+        <li>Projectile motion in two dimensions</li>
       </ul>
+      <h3>Example Problems (Coming Soon)</h3>
     </section>
 
-    <section id="circular-motion">
-      <h2 style="font-family: 'Orbitron', sans-serif;">6. Circular Motion and Other Applications</h2>
+    <section id="references" class="section-box">
+      <h2 style="font-family: 'Orbitron', sans-serif;">References</h2>
       <ul style="font-family: 'Roboto', sans-serif;">
-        <li>Uniform circular motion</li>
-        <li>Centripetal acceleration and force</li>
-        <li>Banked curves, conical pendulum</li>
-      </ul>
-    </section>
-
-    <section id="energy">
-      <h2 style="font-family: 'Orbitron', sans-serif;">7. Energy of a System</h2>
-      <ul style="font-family: 'Roboto', sans-serif;">
-        <li>Kinetic energy</li>
-        <li>Work and the work-energy theorem</li>
-        <li>Potential energy</li>
-      </ul>
-    </section>
-
-    <section id="conservation-energy">
-      <h2 style="font-family: 'Orbitron', sans-serif;">8. Conservation of Energy</h2>
-      <ul style="font-family: 'Roboto', sans-serif;">
-        <li>Conservative vs non-conservative forces</li>
-        <li>Mechanical energy conservation</li>
-      </ul>
-    </section>
-
-    <section id="momentum">
-      <h2 style="font-family: 'Orbitron', sans-serif;">9. Linear Momentum and Collisions</h2>
-      <ul style="font-family: 'Roboto', sans-serif;">
-        <li>Impulse-momentum theorem</li>
-        <li>Elastic and inelastic collisions</li>
-        <li>Center of mass</li>
-      </ul>
-    </section>
-
-    <section id="rotation">
-      <h2 style="font-family: 'Orbitron', sans-serif;">10. Rotation of a Rigid Object</h2>
-      <ul style="font-family: 'Roboto', sans-serif;">
-        <li>Angular variables and kinematics</li>
-        <li>Moment of inertia</li>
-        <li>Rotational kinetic energy</li>
-      </ul>
-    </section>
-
-    <section id="angular-momentum">
-      <h2 style="font-family: 'Orbitron', sans-serif;">11. Angular Momentum</h2>
-      <ul style="font-family: 'Roboto', sans-serif;">
-        <li>Angular momentum for particles and rigid bodies</li>
-        <li>Conservation of angular momentum</li>
-      </ul>
-    </section>
-
-    <section id="static-equilibrium">
-      <h2 style="font-family: 'Orbitron', sans-serif;">12. Static Equilibrium and Elasticity</h2>
-      <ul style="font-family: 'Roboto', sans-serif;">
-        <li>Conditions for equilibrium</li>
-        <li>Elastic moduli</li>
-      </ul>
-    </section>
-
-    <section id="gravitation">
-      <h2 style="font-family: 'Orbitron', sans-serif;">13. Universal Gravitation</h2>
-      <ul style="font-family: 'Roboto', sans-serif;">
-        <li>Newton’s law of gravitation</li>
-        <li>Gravitational potential energy</li>
-        <li>Orbits</li>
-      </ul>
-    </section>
-
-    <section id="fluids">
-      <h2 style="font-family: 'Orbitron', sans-serif;">14. Fluid Mechanics</h2>
-      <ul style="font-family: 'Roboto', sans-serif;">
-        <li>Density and pressure</li>
-        <li>Buoyancy</li>
-        <li>Fluid dynamics (Bernoulli’s equation)</li>
-      </ul>
-    </section>
-
-    <!-- References -->
-    <section id="references">
-      <h2 style="font-family: 'Orbitron', sans-serif;">Textbooks & References</h2>
-      <ul style="font-family: 'Roboto', sans-serif;">
-        <li><strong>Classical Dynamics of Particles and Systems</strong> – Thornton & Marion (Advanced mechanics)</li>
-        <li><strong>University Physics with Modern Physics</strong> – Young & Freedman (Introductory physics)</li>
-        <li><strong>Physics for Scientists and Engineers</strong> – Serway & Jewett (Comprehensive undergraduate text)</li>
+        <li><strong>Physics for Scientists and Engineers</strong> – Serway & Jewett</li>
+        <li><strong>University Physics</strong> – Young & Freedman</li>
+        <li><strong>Classical Dynamics of Particles and Systems</strong> – Thornton & Marion</li>
       </ul>
     </section>
 
   </main>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top">↑</button>
+  <script>
+    const backToTop = document.getElementById("back-to-top");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    });
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
 
 </body>
 </html>
