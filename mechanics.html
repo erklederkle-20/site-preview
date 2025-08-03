@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SpideyPhysics - Mechanics</title>
+  <title>SpideyPhysics - Classical Mechanics</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -29,32 +29,80 @@
   <!-- Main Content -->
   <main style="padding: 20px; max-width: 1000px; margin: auto;">
     <h1 style="font-family: 'Orbitron', sans-serif; text-align: center;">
-      Mechanics
+      Classical Mechanics
     </h1>
+    <p style="font-family: 'Roboto', sans-serif; text-align:center; max-width:800px; margin:auto;">
+      This section covers core concepts of classical mechanics, from the most basic definitions to Newton’s Laws of Motion.  
+      It will grow over time as new material is added, so use the table of contents below to jump to topics of interest.
+    </p>
 
-    <!-- Intro Section -->
-    <section>
-      <h2 style="font-family: 'Orbitron', sans-serif;">Introduction</h2>
+    <!-- Table of Contents -->
+    <nav style="background:#222; padding:15px; border-radius:8px; margin:30px 0;">
+      <h3 style="color:#e62429; font-family: 'Orbitron', sans-serif;">📑 Table of Contents</h3>
+      <ul style="list-style:none; padding:0; font-family:'Roboto', sans-serif;">
+        <li><a href="#definitions" style="color:#fff;">Basic Definitions</a></li>
+        <li><a href="#vectors" style="color:#fff;">Vectors Overview</a></li>
+        <li><a href="#calculus" style="color:#fff;">Calculus in Mechanics</a></li>
+        <li><a href="#momentum" style="color:#fff;">Momentum</a></li>
+        <li><a href="#newtons-laws" style="color:#fff;">Newton’s Three Laws</a></li>
+        <li><a href="#references" style="color:#fff;">Textbooks & References</a></li>
+      </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="definitions">
+      <h2 style="font-family: 'Orbitron', sans-serif;">Basic Definitions</h2>
       <p style="font-family: 'Roboto', sans-serif;">
-        Mechanics is the branch of physics that deals with the motion of objects and the forces that affect them. It forms the foundation for understanding how things move in everyday life and in the universe.
+        <strong>Time:</strong> A measure of the sequence and duration of events. In mechanics, it is treated as a continuous scalar quantity.<br><br>
+        <strong>Distance:</strong> The total length of the path traveled, a scalar quantity, measured in meters (m).<br><br>
+        <strong>Mass:</strong> A measure of the amount of matter in an object, also representing its resistance to acceleration when a force is applied. Measured in kilograms (kg).
       </p>
     </section>
 
-    <!-- Textbooks Section -->
-    <section>
-      <h2 style="font-family: 'Orbitron', sans-serif;">Recommended Textbooks</h2>
-      <ul style="font-family: 'Roboto', sans-serif;">
-        <li>Classical Mechanics – Herbert Goldstein</li>
-        <li>Introduction to Mechanics – Kleppner and Kolenkow</li>
-        <li>Fundamentals of Physics – Halliday, Resnick, and Walker</li>
-      </ul>
+    <section id="vectors">
+      <h2 style="font-family: 'Orbitron', sans-serif;">Vectors Overview</h2>
+      <p style="font-family: 'Roboto', sans-serif;">
+        A vector is a mathematical object that has both magnitude and direction.  
+        Examples in mechanics include displacement, velocity, acceleration, and force.  
+        Vectors are often represented as arrows in diagrams or as components in coordinate systems.
+      </p>
     </section>
 
-    <!-- Practice / Quizzes Section -->
-    <section>
-      <h2 style="font-family: 'Orbitron', sans-serif;">Practice & Quizzes</h2>
+    <section id="calculus">
+      <h2 style="font-family: 'Orbitron', sans-serif;">Calculus in Mechanics</h2>
       <p style="font-family: 'Roboto', sans-serif;">
-        Add quiz questions, practice problems, or interactive exercises related to mechanics here.
+        Calculus provides the mathematical tools to describe change and motion.  
+        Derivatives are used to find quantities like velocity (rate of change of position) and acceleration (rate of change of velocity).  
+        Integrals are used to determine quantities like displacement from velocity or work from force.
+      </p>
+    </section>
+
+    <section id="momentum">
+      <h2 style="font-family: 'Orbitron', sans-serif;">Momentum</h2>
+      <p style="font-family: 'Roboto', sans-serif;">
+        Momentum is defined as the product of an object’s mass and velocity: <em>p = mv</em>.  
+        It is a vector quantity and plays a central role in the conservation laws of mechanics.
+      </p>
+    </section>
+
+    <section id="newtons-laws">
+      <h2 style="font-family: 'Orbitron', sans-serif;">Newton’s Three Laws</h2>
+      <ol style="font-family: 'Roboto', sans-serif;">
+        <li><strong>First Law (Inertia):</strong> A body remains at rest or in uniform motion unless acted upon by a net external force.</li>
+        <li><strong>Second Law:</strong> The acceleration of an object is proportional to the net force acting on it and inversely proportional to its mass. (<em>F = ma</em>)</li>
+        <li><strong>Third Law:</strong> For every action, there is an equal and opposite reaction.</li>
+      </ol>
+    </section>
+
+    <section id="references">
+      <h2 style="font-family: 'Orbitron', sans-serif;">Textbooks & References</h2>
+      <ul style="font-family: 'Roboto', sans-serif;">
+        <li><strong>Classical Dynamics of Particles and Systems</strong> – Thornton & Marion (Advanced text, in-depth theory)</li>
+        <li><strong>University Physics</strong> – Young & Freedman (Comprehensive intro-level text)</li>
+        <li><strong>Physics for Scientists and Engineers</strong> – Serway & Jewett (General undergraduate level)</li>
+      </ul>
+      <p style="font-family: 'Roboto', sans-serif; font-size:0.9em; color:#aaa;">
+        Note: Only open-access textbooks can be linked directly. For copyrighted works, links are provided to publisher or legal purchase/download sources.
       </p>
     </section>
 
