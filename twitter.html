@@ -38,17 +38,31 @@
        data-width="100%"
        data-height="900"
        data-theme="dark"
-       href="https://twitter.com/spideyphysics">
+       href="https://twitter.com/spideyphysics?ref_src=twsrc%5Etfw">
        Tweets by SpideyPhysics
-    </a> 
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </a>
   </section>
 
   <footer>
     © 2025 SpideyPhysics. Made with 🕷️ and passion for science.
   </footer>
 
+  <!-- Load Navbar -->
   <script src="navbar.js" defer></script>
+
+  <!-- Load Twitter Widget -->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <!-- Ensure Twitter loads after navbar injection -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(function() {
+        if (window.twttr && window.twttr.widgets) {
+          window.twttr.widgets.load();
+        }
+      }, 300); // slight delay to ensure navbar finishes loading
+    });
+  </script>
 
 </body>
 </html>
