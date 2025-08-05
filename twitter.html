@@ -48,20 +48,38 @@
   </footer>
 
   <!-- Load Navbar -->
-  <script src="navbar.js" defer></script>
-
-  <!-- Load Twitter Widget -->
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-  <!-- Ensure Twitter loads after navbar injection -->
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      setTimeout(function() {
-        if (window.twttr && window.twttr.widgets) {
-          window.twttr.widgets.load();
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+
+        // Activate dropdown menu
+        const menuButton = document.getElementById("menuButton");
+        const menuContent = document.getElementById("menuContent");
+
+        if (menuButton && menuContent) {
+          menuButton.addEventListener("click", function(event) {
+            event.stopPropagation();
+            menuContent.classList.toggle("show");
+          });
+          document.addEventListener("click", function(event) {
+            if (!event.target.closest(".dropdown")) {
+              menuContent.classList.remove("show");
+            }
+          });
         }
-      }, 300); // slight delay to ensure navbar finishes loading
-    });
+
+        // Load Twitter embed script AFTER navbar loads
+        const twitterScript = document.createElement("script");
+        twitterScript.setAttribute("async", "");
+        twitterScript.setAttribute("src", "https://platform.twitter.com/widgets.js");
+        twitterScript.setAttribute("charset", "utf-8");
+        document.body.appendChild(twitterScript);
+      })
+      .catch(error => {
+        console.error("Failed to load navbar:", error);
+      });
   </script>
 
 </body>
