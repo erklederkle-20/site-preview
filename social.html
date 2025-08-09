@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpideyPhysics - Social Media</title>
+  <link rel="icon" href="SpideyLogo.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <section style="text-align:center; padding: 30px;">
+    <h1 style="font-family: 'Orbitron', sans-serif; color: #e62429; font-size: 2rem;">
+      🌐 SpideyPhysics on Social Media
+    </h1>
+    <p style="max-width: 700px; margin: 10px auto; font-size: 1.1rem; color: #ccc;">
+      Connect with me across all my platforms for science, design, and creativity.
+    </p>
+
+    <!-- Social Media Buttons -->
+    <div style="display: flex; flex-direction: column; gap: 15px; align-items: center; margin-top: 25px;">
+
+      <!-- Twitter/X -->
+      <a href="https://twitter.com/spideyphysics" target="_blank" 
+         style="display: inline-block; background: #1DA1F2; color: #fff; padding: 12px 24px; border-radius: 8px;
+                text-decoration: none; font-weight: bold; font-size: 1.1rem; font-family: 'Roboto', sans-serif;
+                transition: background 0.3s ease;"
+         onmouseover="this.style.backgroundColor='#0d8ddb'"
+         onmouseout="this.style.backgroundColor='#1DA1F2'">
+        🐦 Follow me on Twitter/X
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/share/1AzZL8EHpD/" target="_blank" 
+         style="display: inline-block; background: #1877F2; color: #fff; padding: 12px 24px; border-radius: 8px;
+                text-decoration: none; font-weight: bold; font-size: 1.1rem; font-family: 'Roboto', sans-serif;
+                transition: background 0.3s ease;"
+         onmouseover="this.style.backgroundColor='#0b5ec2'"
+         onmouseout="this.style.backgroundColor='#1877F2'">
+        📘 Visit my Facebook Page
+      </a>
+
+      <!-- Instagram Main -->
+      <a href="https://www.instagram.com/spideyphysics?igsh=MXdtMmVpcTgwMjlhNQ==" target="_blank" 
+         style="display: inline-block; background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4); color: #fff; padding: 12px 24px; border-radius: 8px;
+                text-decoration: none; font-weight: bold; font-size: 1.1rem; font-family: 'Roboto', sans-serif;">
+        📷 Follow SpideyPhysics on Instagram
+      </a>
+
+      <!-- Instagram Secondary -->
+      <a href="https://www.instagram.com/spideymodels?igsh=dWxnYXBrYWJ1NXlw" target="_blank" 
+         style="display: inline-block; background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4); color: #fff; padding: 12px 24px; border-radius: 8px;
+                text-decoration: none; font-weight: bold; font-size: 1.1rem; font-family: 'Roboto', sans-serif;">
+        🎨 Follow SpideyModels (3D Art) on Instagram
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/erikhristev?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" 
+         style="display: inline-block; background: #0077B5; color: #fff; padding: 12px 24px; border-radius: 8px;
+                text-decoration: none; font-weight: bold; font-size: 1.1rem; font-family: 'Roboto', sans-serif;
+                transition: background 0.3s ease;"
+         onmouseover="this.style.backgroundColor='#005f8e'"
+         onmouseout="this.style.backgroundColor='#0077B5'">
+        💼 Connect with me on LinkedIn
+      </a>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2025 SpideyPhysics. Made with 🕷️ and passion for science.
+  </footer>
+
+  <!-- Load Navbar -->
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+
+        // Activate dropdown menu
+        const menuButton = document.getElementById("menuButton");
+        const menuContent = document.getElementById("menuContent");
+
+        if (menuButton && menuContent) {
+          menuButton.addEventListener("click", function(event) {
+            event.stopPropagation();
+            menuContent.classList.toggle("show");
+          });
+          document.addEventListener("click", function(event) {
+            if (!event.target.closest(".dropdown")) {
+              menuContent.classList.remove("show");
+            }
+          });
+        }
+      })
+      .catch(error => {
+        console.error("Failed to load navbar:", error);
+      });
+  </script>
+
+</body>
+</html>
