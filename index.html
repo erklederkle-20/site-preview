@@ -115,10 +115,8 @@
         .then(response => response.json())
         .then(testimonials => {
             container.innerHTML = '';
-            // Duplicate testimonials for infinite effect
-            const allTestimonials = [...testimonials, ...testimonials];
             
-            allTestimonials.forEach(t => {
+            testimonials.forEach(t => {
                 if (!t.published) return;
 
                 const thread = document.createElement('div');
@@ -149,10 +147,8 @@
                     container.scrollLeft += 1;
                     
                     // Seamless loop logic
-                    if (container.scrollLeft >= itemWidth) {
+                    if (container.scrollLeft >= (container.scrollWidth - container.clientWidth)) {
                         container.scrollLeft = 0;
-                    } else if (container.scrollLeft <= 0) {
-                        container.scrollLeft = itemWidth;
                     }
                 }, 50);
             }
