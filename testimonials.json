@@ -54,5 +54,19 @@
             "avatar": "https://yt3.ggpht.com/qcfg5ujn5AbeqMsbu_qTyDitoSIfP5ucPMmgLXLX-W2xAHZuTa375tHdkrjRtxkt1VqDz4R_dQ=s88-c-k-c0x00ffffff-no-rj"
         },
         "published": true
+    },
+    {
+        "id": "thread_005",
+        "student": {
+            "name": "YouTube Comment",
+            "text": "Great job man! This is great and detailed. Keep it up!",
+            "likes": 1
+        },
+        "instructor": {
+            "name": "Spidey Physics",
+            "text": "Thank you for the support, I appreciate it! 💪",
+            "avatar": "https://yt3.ggpht.com/qcfg5ujn5AbeqMsbu_qTyDitoSIfP5ucPMmgLXLX-W2xAHZuTa375tHdkrjRtxkt1VqDz4R_dQ=s88-c-k-c0x00ffffff-no-rj"
+        },
+        "published": true
     }
 ]
