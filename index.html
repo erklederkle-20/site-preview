@@ -112,7 +112,9 @@
         .then(response => response.json())
         .then(testimonials => {
             const container = document.getElementById('testimonials-container');
-            testimonials.forEach(t => {
+            // Duplicate testimonials to create an infinite loop effect
+            const allTestimonials = [...testimonials, ...testimonials];
+            allTestimonials.forEach(t => {
                 if (!t.published) return;
 
                 const thread = document.createElement('div');

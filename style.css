@@ -158,10 +158,14 @@ body {
 .testimonials-grid {
     display: flex;
     gap: 20px;
-    overflow-x: auto;
     padding: 20px;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; /* smooth scrolling for mobile */
+    animation: scrollTestimonials 30s linear infinite;
+    width: max-content;
+}
+
+@keyframes scrollTestimonials {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
 }
 
 .testimonial-thread {
