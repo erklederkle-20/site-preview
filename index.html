@@ -44,10 +44,7 @@
 
   <section class="testimonials">
     <h2>Student Success</h2>
-    <div class="testimonial-card">
-      <p>"SpideyPhysics completely changed how I approach mechanics. Highly recommended!"</p>
-      <cite>— A Happy Student</cite>
-    </div>
+    <div id="testimonials-container" class="testimonials-grid"></div>
   </section>
 
   <section>
@@ -109,6 +106,35 @@
       el.style.animationDuration = (20 + Math.random() * 20) + 's';
       document.body.appendChild(el);
     }
+
+    // Load testimonials
+    fetch('testimonials.json')
+        .then(response => response.json())
+        .then(testimonials => {
+            const container = document.getElementById('testimonials-container');
+            testimonials.forEach(t => {
+                if (!t.published) return;
+
+                const thread = document.createElement('div');
+                thread.className = 'testimonial-thread';
+
+                thread.innerHTML = `
+                    <div class="testimonial-card student">
+                        <p>"${t.student.text}"</p>
+                        <cite>— ${t.student.name} <span class="likes">(${t.student.likes} likes)</span></cite>
+                    </div>
+                    <div class="testimonial-card instructor">
+                        <div class="instructor-header">
+                            <img src="${t.instructor.avatar}" alt="${t.instructor.name}" class="instructor-avatar">
+                            <strong>${t.instructor.name}</strong>
+                        </div>
+                        <p>${t.instructor.text}</p>
+                    </div>
+                `;
+                container.appendChild(thread);
+            });
+        })
+        .catch(err => console.error('Failed to load testimonials:', err));
   </script>
 
   <script src="navbar.js" defer></script>

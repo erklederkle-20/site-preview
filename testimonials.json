@@ -1,0 +1,16 @@
+[
+    {
+        "id": "thread_001",
+        "student": {
+            "name": "YouTube Comment",
+            "text": "I learned a lot from this style of video, any chance you could make a video similar to this for every future chapter? (Even ones without practice problems. Just being able to see all the important formulas in one place is helpful). Thanks",
+            "likes": 4
+        },
+        "instructor": {
+            "name": "Spidey Physics",
+            "text": "Thank you for the comment I'm glad I could help! Of course I gotchu for future videos, I also like to do the final exam equation sheet study guide so I'll release that near the end of the course !",
+            "avatar": "https://yt3.ggpht.com/qcfg5ujn5AbeqMsbu_qTyDitoSIfP5ucPMmgLXLX-W2xAHZuTa375tHdkrjRtxkt1VqDz4R_dQ=s88-c-k-c0x00ffffff-no-rj"
+        },
+        "published": true
+    }
+]
