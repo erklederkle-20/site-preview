@@ -97,4 +97,18 @@
         },
         "published": true
     }
-]
+],
+    {
+        "id": "thread_008",
+        "student": {
+            "name": "YouTube Comment",
+            "text": "hi!! your videos are super helpful and I was wondering if you could possibly do some problems regarding atomic physics",
+            "likes": 1
+        },
+        "instructor": {
+            "name": "Spidey Physics",
+            "text": "Thank you! Sure thing I'll do a few problems and more discussions on the theory in chapter 42! Should be out very soon :)",
+            "avatar": "https://yt3.ggpht.com/qcfg5ujn5AbeqMsbu_qTyDitoSIfP5ucPMmgLXLX-W2xAHZuTa375tHdkrjRtxkt1VqDz4R_dQ=s88-c-k-c0x00ffffff-no-rj"
+        },
+        "published": true
+    }
