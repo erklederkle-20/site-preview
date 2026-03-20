@@ -108,11 +108,17 @@
     }
 
     // Load testimonials
-    fetch('testimonials.json')
+    const container = document.getElementById('testimonials-container');
+    container.innerHTML = '<p style="text-align:center;">Loading testimonials...</p>';
+
+    fetch('testimonials.json?t=' + Date.now())
         .then(response => response.json())
         .then(testimonials => {
-            const container = document.getElementById('testimonials-container');
-            testimonials.forEach(t => {
+            container.innerHTML = '';
+            // Duplicate testimonials for infinite effect
+            const allTestimonials = [...testimonials, ...testimonials];
+            
+            allTestimonials.forEach(t => {
                 if (!t.published) return;
 
                 const thread = document.createElement('div');
@@ -133,8 +139,34 @@
                 `;
                 container.appendChild(thread);
             });
+
+            // Auto-scroll functionality
+            let scrollInterval;
+            let resumeTimeout;
+
+            function startAutoScroll() {
+                scrollInterval = setInterval(() => {
+                    container.scrollLeft += 1;
+                    if (container.scrollLeft >= container.scrollWidth / 2) {
+                        container.scrollLeft = 0;
+                    }
+                }, 50);
+            }
+
+            function stopAutoScroll() {
+                clearInterval(scrollInterval);
+                clearTimeout(resumeTimeout);
+                resumeTimeout = setTimeout(startAutoScroll, 3000); // Resume after 3s
+            }
+
+            container.addEventListener('wheel', stopAutoScroll);
+            container.addEventListener('touchstart', stopAutoScroll);
+            startAutoScroll();
         })
-        .catch(err => console.error('Failed to load testimonials:', err));
+        .catch(err => {
+            console.error('Failed to load testimonials:', err);
+            container.innerHTML = '<p style="text-align:center;">Failed to load testimonials.</p>';
+        });
   </script>
 
   <script src="navbar.js" defer></script>
