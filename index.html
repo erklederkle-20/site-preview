@@ -140,27 +140,39 @@
                 container.appendChild(thread);
             });
 
-            // Auto-scroll functionality
-            let scrollInterval;
+            // Infinite Scroll functionality
+            let autoScrollInterval;
             let resumeTimeout;
+            const itemWidth = container.scrollWidth / 2;
 
             function startAutoScroll() {
-                scrollInterval = setInterval(() => {
+                autoScrollInterval = setInterval(() => {
                     container.scrollLeft += 1;
-                    if (container.scrollLeft >= container.scrollWidth / 2) {
-                        container.scrollLeft = 0;
-                    }
+                    handleScrollLoop();
                 }, 50);
             }
 
-            function stopAutoScroll() {
-                clearInterval(scrollInterval);
-                clearTimeout(resumeTimeout);
-                resumeTimeout = setTimeout(startAutoScroll, 3000); // Resume after 3s
+            function handleScrollLoop() {
+                // If we scrolled past the first set, reset to 0
+                if (container.scrollLeft >= itemWidth) {
+                    container.scrollLeft = 0;
+                }
+                // If we scrolled before the start, snap to the end of the first set
+                else if (container.scrollLeft <= 0) {
+                    container.scrollLeft = itemWidth;
+                }
             }
 
+            function stopAutoScroll() {
+                clearInterval(autoScrollInterval);
+                clearTimeout(resumeTimeout);
+                resumeTimeout = setTimeout(startAutoScroll, 3000);
+            }
+
+            container.addEventListener('scroll', handleScrollLoop);
             container.addEventListener('wheel', stopAutoScroll);
             container.addEventListener('touchstart', stopAutoScroll);
+            
             startAutoScroll();
         })
         .catch(err => {
