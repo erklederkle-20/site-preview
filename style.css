@@ -156,19 +156,19 @@ body {
 
 /* === Testimonials Grid === */
 .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
     gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
+    overflow-x: auto;
+    padding: 20px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* smooth scrolling for mobile */
 }
 
 .testimonial-thread {
+    flex: 0 0 300px; /* fixed width for cards */
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-bottom: 20px;
 }
 
 .testimonial-card {
