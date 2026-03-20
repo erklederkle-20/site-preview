@@ -68,5 +68,19 @@
             "avatar": "https://yt3.ggpht.com/qcfg5ujn5AbeqMsbu_qTyDitoSIfP5ucPMmgLXLX-W2xAHZuTa375tHdkrjRtxkt1VqDz4R_dQ=s88-c-k-c0x00ffffff-no-rj"
         },
         "published": true
+    },
+    {
+        "id": "thread_006",
+        "student": {
+            "name": "YouTube Comment",
+            "text": "Thank you for saving my daughter's science project. You are the hero!",
+            "likes": 2
+        },
+        "instructor": {
+            "name": "Spidey Physics",
+            "text": "I am so happy I could provide some value! If you wanna see any other interesting experiments or need help with other topics let me know! I'll be happy to make a video in the future :)",
+            "avatar": "https://yt3.ggpht.com/qcfg5ujn5AbeqMsbu_qTyDitoSIfP5ucPMmgLXLX-W2xAHZuTa375tHdkrjRtxkt1VqDz4R_dQ=s88-c-k-c0x00ffffff-no-rj"
+        },
+        "published": true
     }
 ]
