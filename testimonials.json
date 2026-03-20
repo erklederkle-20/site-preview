@@ -83,4 +83,18 @@
         },
         "published": true
     }
-]
+],
+    {
+        "id": "thread_007",
+        "student": {
+            "name": "YouTube Comment",
+            "text": "One of my fav problems in this part of physics  ( keep it up love from india ❤)",
+            "likes": 2
+        },
+        "instructor": {
+            "name": "Spidey Physics",
+            "text": "An amazing problem, thank you for watching and commenting :)",
+            "avatar": "https://yt3.ggpht.com/qcfg5ujn5AbeqMsbu_qTyDitoSIfP5ucPMmgLXLX-W2xAHZuTa375tHdkrjRtxkt1VqDz4R_dQ=s88-c-k-c0x00ffffff-no-rj"
+        },
+        "published": true
+    }
