@@ -110,5 +110,33 @@
             "avatar": "https://yt3.ggpht.com/qcfg5ujn5AbeqMsbu_qTyDitoSIfP5ucPMmgLXLX-W2xAHZuTa375tHdkrjRtxkt1VqDz4R_dQ=s88-c-k-c0x00ffffff-no-rj"
         },
         "published": true
+    },
+    {
+        "id": "thread_009",
+        "student": {
+            "name": "YouTube Comment",
+            "text": "thank you so much, amazing job",
+            "likes": 1
+        },
+        "instructor": {
+            "name": "Spidey Physics",
+            "text": "Thank you for your kindness :) there’s more videos coming soon !!!",
+            "avatar": "https://yt3.ggpht.com/qcfg5ujn5AbeqMsbu_qTyDitoSIfP5ucPMmgLXLX-W2xAHZuTa375tHdkrjRtxkt1VqDz4R_dQ=s88-c-k-c0x00ffffff-no-rj"
+        },
+        "published": true
+    },
+    {
+        "id": "thread_010",
+        "student": {
+            "name": "YouTube Comment",
+            "text": "ngl watched these videos to understand the tutorials, but they're also just hella entertaining on the side 10/10",
+            "likes": 1
+        },
+        "instructor": {
+            "name": "Spidey Physics",
+            "text": "Thanks so much! This comment made me smile. My goal is to show everyone that physics is cool and fun and also not too difficult if it is broken down into simple steps :)",
+            "avatar": "https://yt3.ggpht.com/qcfg5ujn5AbeqMsbu_qTyDitoSIfP5ucPMmgLXLX-W2xAHZuTa375tHdkrjRtxkt1VqDz4R_dQ=s88-c-k-c0x00ffffff-no-rj"
+        },
+        "published": true
     }
 ]
