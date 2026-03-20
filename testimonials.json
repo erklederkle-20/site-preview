@@ -26,5 +26,33 @@
             "avatar": "https://yt3.ggpht.com/qcfg5ujn5AbeqMsbu_qTyDitoSIfP5ucPMmgLXLX-W2xAHZuTa375tHdkrjRtxkt1VqDz4R_dQ=s88-c-k-c0x00ffffff-no-rj"
         },
         "published": true
+    },
+    {
+        "id": "thread_003",
+        "student": {
+            "name": "YouTube Comment",
+            "text": "Do detailed lectures on newton laws of motion topics please.",
+            "likes": 0
+        },
+        "instructor": {
+            "name": "Spidey Physics",
+            "text": "Thank you very much! I will work on this ❤",
+            "avatar": "https://yt3.ggpht.com/qcfg5ujn5AbeqMsbu_qTyDitoSIfP5ucPMmgLXLX-W2xAHZuTa375tHdkrjRtxkt1VqDz4R_dQ=s88-c-k-c0x00ffffff-no-rj"
+        },
+        "published": true
+    },
+    {
+        "id": "thread_004",
+        "student": {
+            "name": "YouTube Comment",
+            "text": "spidey physics is the goat i want to be like him when I grow up",
+            "likes": 0
+        },
+        "instructor": {
+            "name": "Spidey Physics",
+            "text": "Thank you! This brings tears of joy to my eyes ❤",
+            "avatar": "https://yt3.ggpht.com/qcfg5ujn5AbeqMsbu_qTyDitoSIfP5ucPMmgLXLX-W2xAHZuTa375tHdkrjRtxkt1VqDz4R_dQ=s88-c-k-c0x00ffffff-no-rj"
+        },
+        "published": true
     }
 ]
