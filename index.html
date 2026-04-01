@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="SpideyPhysics offers personalized math and physics tutoring to help students untangle complex concepts and build confidence.">
-  <meta name="keywords" content="physics tutoring, math tutor, spideyphysics, online physics help, science tutoring">
-  <title>SpideyPhysics Tutoring | Master Physics with Confidence</title>
+  <meta name="description" content="SpideyPhysics offers personalized math and physics tutoring and a free learning app to help students master physics with confidence.">
+  <meta name="keywords" content="physics tutoring, math tutor, spideyphysics, online physics help, science tutoring, physics app">
+  <title>SpideyPhysics | Master Physics with Confidence</title>
   <link rel="icon" href="SpideyLogo.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet" />
-  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,39 +15,74 @@
   <!-- Navbar container -->
   <div id="navbar"></div>
 
+  <!-- Hero Section -->
   <header class="homepage-header">
     <div class="header-content">
       <h1>SpideyPhysics</h1>
-      <p>Master Math & Physics with SpideyPrecision. Book a free meeting to untangle the concepts troubling you most.</p>
-      <a href="#meeting-form" class="cta-button">🎯 Schedule a Free Meeting</a>
+      <p>Master Math & Physics with SpideyPrecision. Personalized tutoring, a free learning app, and a YouTube channel packed with lessons.</p>
+      <div class="hero-buttons">
+        <a href="#app-section" class="cta-button">Try the App</a>
+        <a href="#meeting-form" class="cta-button cta-button-outline">Book a Free Meeting</a>
+      </div>
     </div>
   </header>
 
-  <section>
-    <h2>🧠 Why Choose SpideyPhysics?</h2>
-    <div class="features-grid">
-      <div class="feature-card">
-        <h3>Personalized</h3>
-        <p>Tutoring sessions tailored specifically to your academic needs and pace.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Clear Clarity</h3>
-        <p>Complex physics concepts explained in simple, intuitive terms.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Free Intro</h3>
-        <p>Book a free 15-minute meeting to ensure we're the perfect fit.</p>
+  <!-- About / Teaching Experience -->
+  <section class="about-section">
+    <div class="about-container">
+      <img src="Screenshot_20250804-213542.png" alt="Erik - SpideyPhysics" class="about-photo" />
+      <div class="about-text">
+        <h2>Meet Your Tutor</h2>
+        <p>Hi, I'm Erik, the creator of SpideyPhysics. I'm currently working on a Master's in Nanoscience and Nanotechnology, and I completed an undergraduate degree in traditional physics. I've spent years teaching and tutoring physics, mathematics, and related subjects.</p>
+        <p>I believe anyone can learn physics with enough time and practice. SpideyPhysics exists to help students untangle complex concepts, build confidence, and truly enjoy learning.</p>
+        <ul class="about-facts">
+          <li>Named my brand after my favorite superhero: Spider-Man</li>
+          <li>Love reading about physics history and breakthroughs</li>
+          <li>Create videos to share my passion with the world</li>
+        </ul>
+        <a href="about.html" class="cta-button-small">Learn More About Me</a>
       </div>
     </div>
   </section>
 
-  <section class="testimonials">
-    <h2>⭐ Student Success</h2>
-    <div id="testimonials-container" class="testimonials-grid"></div>
+  <!-- App Promotion -->
+  <section id="app-section" class="app-promo">
+    <h2>Learn Physics with the Spidey Physics App</h2>
+    <p class="section-subtitle">A free, interactive learning app with 40 chapters of university-level physics. Study at your own pace with tools designed to help you actually understand the material.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>40 Chapters</h3>
+        <p>From mechanics to modern physics, covering a full university curriculum.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Flashcards</h3>
+        <p>Spider-Memory flashcards to drill key concepts and definitions.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Conceptual Quizzes</h3>
+        <p>Multiple-choice questions with detailed feedback on every answer.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Math Problems</h3>
+        <p>Step-by-step calculation problems with setup, equations, and solutions.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Equation Reference</h3>
+        <p>Essential formulas for every chapter, beautifully rendered with LaTeX.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Progress Tracking</h3>
+        <p>Track your completion across all chapters and build a study streak.</p>
+      </div>
+    </div>
+    <a href="#" class="cta-button app-cta">Try the Spidey Physics App</a>
+    <p class="app-note">Free to use. No account required. Works in your browser.</p>
   </section>
 
+  <!-- YouTube Section -->
   <section>
-    <h2>🎥 Featured Videos from SpideyPhysics</h2>
+    <h2>Featured Videos from SpideyPhysics</h2>
+    <p class="section-subtitle">Check out tutorials, problem walkthroughs, and equation sheet study guides on YouTube.</p>
     <div class="video-container">
       <iframe src="https://www.youtube.com/embed/X2O5LileZiw" allowfullscreen></iframe>
     </div>
@@ -58,45 +92,54 @@
     <div class="video-container">
       <iframe src="https://www.youtube.com/embed/kZPZwODgiQY" allowfullscreen></iframe>
     </div>
-    <a href="https://youtube.com/@spideyphysics?si=jOhH6f18vpEF0xps" target="_blank" class="cta-button">Visit My YouTube Channel</a>
+    <a href="https://youtube.com/@spideyphysics" target="_blank" class="cta-button">Visit My YouTube Channel</a>
   </section>
 
-  <section>
-    <h2>📄 Downloadable Study Guides</h2>
-    <ul style="list-style: none; padding-left: 0; font-size: 1.1rem; line-height: 2;">
-      <div style="text-align: center; margin-bottom: 1.5rem;">
-        <a href="How_to_Understand_Any_Physics_Equation.pdf" target="_blank" class="download-pdf">
-          🌀 Download: How to Understand Any Physics Equation – Case Study: Newton's Second Law
-        </a>
-      </div>
-      <!-- Add more PDF links here if needed -->
-    </ul>
-    <p style="text-align: center; margin-top: 1.5rem;">
-      <em>More free guides coming soon – stay tuned!</em>
-    </p>
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>Student Success</h2>
+    <div id="testimonials-container" class="testimonials-grid"></div>
   </section>
 
-  <section id="meeting-form">
-    <h2>🗓️ Schedule a Free Meeting</h2>
-    <p style="text-align: center; max-width: 600px; margin: 0 auto 20px; color: #ccc;">
-      Have a question or want to book a free intro meeting?  
-      Just click below, and your email app will open with a pre-filled message.  
-    </p>
-    <div style="text-align: center; margin-top: 20px;">
-      <a href="mailto:spideyphysics@gmail.com?subject=SpideyPhysics%20Tutoring%20Inquiry&body=Hi%20Erik,%0D%0A%0D%0AI%20am%20interested%20in%20tutoring.%20My%20name%20is%20[Your%20Name]%20and%20I%20would%20like%20help%20with%20[Your%20Topic].%0D%0A%0D%0AThank%20you!"
-         class="meeting-cta">
-        📩 Send Me a Message
+  <!-- Study Guide -->
+  <section class="study-guide-callout">
+    <div class="callout-card">
+      <h3>Free Study Guide</h3>
+      <p>Download "How to Understand Any Physics Equation" — a step-by-step guide using Newton's Second Law as a case study.</p>
+      <a href="How_to_Understand_Any_Physics_Equation.pdf" target="_blank" class="download-pdf">
+        Download PDF
       </a>
     </div>
   </section>
 
+  <!-- Contact / Booking -->
+  <section id="meeting-form">
+    <h2>Schedule a Free Meeting</h2>
+    <p style="text-align: center; max-width: 600px; margin: 0 auto 20px; color: #ccc;">
+      Have a question or want to book a free intro meeting?
+      Just click below, and your email app will open with a pre-filled message.
+    </p>
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="mailto:spideyphysics@gmail.com?subject=SpideyPhysics%20Tutoring%20Inquiry&body=Hi%20Erik,%0D%0A%0D%0AI%20am%20interested%20in%20tutoring.%20My%20name%20is%20[Your%20Name]%20and%20I%20would%20like%20help%20with%20[Your%20Topic].%0D%0A%0D%0AThank%20you!"
+         class="meeting-cta">
+        Send Me a Message
+      </a>
+    </div>
+    <div class="social-links">
+      <a href="https://youtube.com/@spideyphysics" target="_blank">YouTube</a>
+      <a href="https://twitter.com/spideyphysics" target="_blank">Twitter/X</a>
+      <a href="https://www.instagram.com/spideyphysics" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/in/erikhristev" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
   <footer>
-    © 2025 SpideyPhysics. Made with 🕷️ and passion for science.
+    &copy; 2026 SpideyPhysics. Made with a passion for science.
   </footer>
 
   <script>
     // Floating physics equations animation
-    const symbols = ['E=mc²', 'F=ma', 'ΔV', '∫F·dx', 'v = u + at', 'x(t)', 'ψ(x)', 'ΣF', 'λ', 'hν', 'ΔxΔp ≥ ħ/2'];
+    const symbols = ['E=mc\u00B2', 'F=ma', '\u0394V', '\u222BF\u00B7dx', 'v = u + at', 'x(t)', '\u03C8(x)', '\u03A3F', '\u03BB', 'h\u03BD', '\u0394x\u0394p \u2265 \u0127/2'];
     for (let i = 0; i < 30; i++) {
       const el = document.createElement('div');
       el.className = 'equation';
@@ -115,7 +158,7 @@
         .then(response => response.json())
         .then(testimonials => {
             container.innerHTML = '';
-            
+
             testimonials.forEach(t => {
                 if (!t.published) return;
 
@@ -125,7 +168,7 @@
                 thread.innerHTML = `
                     <div class="testimonial-card student">
                         <p>"${t.student.text}"</p>
-                        <cite>— ${t.student.name} <span class="likes">(${t.student.likes} likes)</span></cite>
+                        <cite>\u2014 ${t.student.name} <span class="likes">(${t.student.likes} likes)</span></cite>
                     </div>
                     <div class="testimonial-card instructor">
                         <div class="instructor-header">
@@ -145,8 +188,7 @@
             function startAutoScroll() {
                 scrollInterval = setInterval(() => {
                     container.scrollLeft += 1;
-                    
-                    // Seamless loop logic
+
                     if (container.scrollLeft >= (container.scrollWidth - container.clientWidth)) {
                         container.scrollLeft = 0;
                     }
